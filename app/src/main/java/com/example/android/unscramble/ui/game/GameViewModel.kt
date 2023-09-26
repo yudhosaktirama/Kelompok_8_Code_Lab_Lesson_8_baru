@@ -15,11 +15,11 @@ class GameViewModel : ViewModel() {
         get() = _currenScrambleWord
 
     init {
-        Log.d("Game Fragment","Game Fragment Terbuat")
+        Log.d("Game Fragment","Game ViewModel Terbuat")
     }
 
     override fun onCleared() {
         super.onCleared()
-        Log.d("Game  Fragment", "Game Fragment Dihancurkan")
+        Log.d("Game  Fragment", "Game ViewModel Dihancurkan")
     }
 }

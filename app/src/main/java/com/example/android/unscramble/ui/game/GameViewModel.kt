@@ -13,6 +13,8 @@ class GameViewModel : ViewModel() {
     private var _currenScrambleWord= "test"
     val currentScrambleWord: String
         get() = _currenScrambleWord
+    private var wordList: MutableList<String> = mutableListOf()
+    private lateinit var currentWord: String
 
     init {
         Log.d("Game Fragment","Game ViewModel Terbuat")
@@ -21,5 +23,9 @@ class GameViewModel : ViewModel() {
     override fun onCleared() {
         super.onCleared()
         Log.d("Game  Fragment", "Game ViewModel Dihancurkan")
+    }
+
+    private  fun getNextWord(){
+        currentWord = allWordsList.random()
     }
 }

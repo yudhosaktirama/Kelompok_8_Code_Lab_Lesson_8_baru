@@ -1,5 +1,6 @@
 package com.example.android.unscramble.ui.game
 
+import android.util.Log
 import androidx.lifecycle.ViewModel
 
 class GameViewModel : ViewModel() {
@@ -13,6 +14,12 @@ class GameViewModel : ViewModel() {
     val currentScrambleWord: String
         get() = _currenScrambleWord
 
+    init {
+        Log.d("Game Fragment","Game Fragment Terbuat")
+    }
 
-
+    override fun onCleared() {
+        super.onCleared()
+        Log.d("Game  Fragment", "Game Fragment Dihancurkan")
+    }
 }

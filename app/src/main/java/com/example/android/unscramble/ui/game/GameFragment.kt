@@ -134,6 +134,6 @@ class GameFragment : Fragment() {
      * Displays the next scrambled word on screen.
      */
     private fun updateNextWordOnScreen() {
-        binding.textViewUnscrambledWord.text = currentScrambledWord
+        binding.textViewUnscrambledWord.text = gameViewModel.currentScrambleWord
     }
 }

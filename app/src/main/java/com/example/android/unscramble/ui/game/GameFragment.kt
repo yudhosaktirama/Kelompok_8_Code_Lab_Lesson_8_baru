@@ -94,6 +94,7 @@ class GameFragment : Fragment() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.congratulations))
             .setMessage(getString(R.string.you_scored, gameViewModel.score))
+            .setCancelable(false)
     }
     /*
      * Re-initializes the data in the ViewModel and updates the views with the new data, to

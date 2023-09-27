@@ -95,6 +95,12 @@ class GameFragment : Fragment() {
             .setTitle(getString(R.string.congratulations))
             .setMessage(getString(R.string.you_scored, gameViewModel.score))
             .setCancelable(false)
+            .setNegativeButton(getString(R.string.exit)) { _, _ ->
+                exitGame()
+            }
+            .setPositiveButton(getString(R.string.play_again)) { _, _ ->
+                restartGame()
+            }
     }
     /*
      * Re-initializes the data in the ViewModel and updates the views with the new data, to

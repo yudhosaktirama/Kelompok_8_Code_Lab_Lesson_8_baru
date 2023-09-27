@@ -101,6 +101,7 @@ class GameFragment : Fragment() {
             .setPositiveButton(getString(R.string.play_again)) { _, _ ->
                 restartGame()
             }
+            .show()
     }
     /*
      * Re-initializes the data in the ViewModel and updates the views with the new data, to

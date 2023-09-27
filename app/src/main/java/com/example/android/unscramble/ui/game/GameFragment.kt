@@ -93,6 +93,7 @@ class GameFragment : Fragment() {
     private fun showFinalScoreDialog() {
         MaterialAlertDialogBuilder(requireContext())
             .setTitle(getString(R.string.congratulations))
+            .setMessage(getString(R.string.you_scored, gameViewModel.score))
     }
     /*
      * Re-initializes the data in the ViewModel and updates the views with the new data, to

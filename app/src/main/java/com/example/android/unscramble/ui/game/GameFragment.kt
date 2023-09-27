@@ -21,6 +21,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.unscramble.R
@@ -71,10 +72,15 @@ class GameFragment : Fragment() {
     */
     private fun onSubmitWord() {
         val playerWord = binding.textInputEditText.text.toString()
-        if (gameViewModel.nextWord()) {
+        if (gameViewModel.isUserWordCorrect(playerWord)) {
+            setErrorTextField(false)
+            if (gameViewModel.nextWord()) {
             updateNextWordOnScreen()
-        } else {
+            } else {
             showFinalScoreDialog()
+            }
+        }else {
+            setErrorTextField(true)
         }
     }
 

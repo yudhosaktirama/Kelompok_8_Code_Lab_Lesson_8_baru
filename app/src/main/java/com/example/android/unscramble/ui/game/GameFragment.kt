@@ -25,6 +25,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.example.android.unscramble.R
 import com.example.android.unscramble.databinding.GameFragmentBinding
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 
 /**
  * Fragment where the game is played, contains the game logic.
@@ -89,6 +90,9 @@ class GameFragment : Fragment() {
         return String(tempWord)
     }
 
+    private fun showFinalScoreDialog() {
+        MaterialAlertDialogBuilder(requireContext())
+    }
     /*
      * Re-initializes the data in the ViewModel and updates the views with the new data, to
      * restart the game.

@@ -66,6 +66,9 @@ class GameFragment : Fragment() {
         binding.score.text = getString(R.string.score, 0)
         binding.wordCount.text = getString(
                 R.string.word_count, 0, MAX_NO_OF_WORDS)
+        gameViewModel.currentScrambleWord.observe(viewLifecycleOwner) { newWord ->
+            binding.textViewUnscrambledWord.text = newWord
+        }
     }
 
     /*
@@ -153,7 +156,7 @@ class GameFragment : Fragment() {
      * Displays the next scrambled word on screen.
      */
     private fun updateNextWordOnScreen() {
-        binding.textViewUnscrambledWord.text = gameViewModel.currentScrambleWord
+        binding.textViewUnscrambledWord.text = gameViewModel.currentScrambleWord.value
     }
 
     override fun onDetach() {

@@ -75,6 +75,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/default_margin"
             android:layout_marginBottom="@dimen/default_margin"
+            android:text="@{gameViewModel.currentScrambleWord}"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline3"
             app:layout_constraintBottom_toTopOf="@+id/textView_instructions"
             app:layout_constraintEnd_toEndOf="parent"

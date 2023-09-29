@@ -75,9 +75,7 @@ class GameFragment : Fragment() {
         gameViewModel.score.observe(viewLifecycleOwner) { newScore ->
             binding.score.text = getString(R.string.score, newScore)
         }
-        gameViewModel.currentScrambleWord.observe(viewLifecycleOwner) { newWord ->
-            binding.textViewUnscrambledWord.text = newWord
-        }
+
     }
 
     /*
